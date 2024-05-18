@@ -1,7 +1,10 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/layout.jsx'
 import Home from './pages/home.jsx'
-import { Children } from 'react';
+import Contact from './pages/contact.jsx'
+import Projects from './pages/projects.jsx';
+import Skills from './pages/skills.jsx';
+import WorkExperience from './pages/workExperience.jsx';
 
 function App() {
   const router = createBrowserRouter([
@@ -14,6 +17,22 @@ function App() {
         { 
           path: "/",
           element: <Home />
+        },
+        {
+          path: "/contact",
+          element: <Contact />
+        },
+        {
+          path: "/projects",
+          element: <Projects />
+        },
+        {
+          path: "/skills",
+          element: <Skills />
+        },
+        {
+          path: "/experience",
+          element: <WorkExperience />
         }
       ]
     }

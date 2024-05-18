@@ -1,5 +1,36 @@
-.hello-world{
+header {
+    background-color: #010409;
+    border-bottom: 1px solid #30363d;
+    background: linear-gradient(to left , #0f2027, #203a43, #0f2027); 
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: end;
     align-items: center;
-    font-size: 36px;
-    margin: 1px;
+}
+
+nav a {
+    color: #e6edf3;
+    text-decoration: none;
+    padding: 0.75rem;
+    margin: 0.25rem 0.5rem;
+    border-radius: 14px;
+}
+
+nav a:hover {
+    background-color: rgba(216, 216, 216, 0.2);
+}
+
+.menu {
+    cursor: pointer;
+    border: 1px solid #3a3c40;;
+    border-radius: 8px;
+    width: 36px;
+    height: 36px;
+    padding: 0.25rem;
+    background-color: #0f2027;
+    color: #7f889b;
+    margin: 0.25rem auto 0.25rem 0.5rem;
 }
