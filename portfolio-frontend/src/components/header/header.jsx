@@ -1,12 +1,11 @@
 import './header.css'
 import React from "react";
 
-function header(){
+export default function Header(){
     return(
         <header>
-            <div className='hello-world'>Hello World</div>
+            <div className='hello-world'>Header</div>
         </header>
     )
 }
 
-export default header

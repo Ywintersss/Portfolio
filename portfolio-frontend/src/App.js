@@ -1,24 +1,29 @@
-import './App.css';
-import Header from './components/header/header.js'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Layout from './components/layout.jsx'
+import Home from './pages/home.jsx'
+import { Children } from 'react';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      // parent route wraps child routes
+      element: <Layout />,
+      children : 
+      [
+        // Outlet is used to render child route components when the corresponding url is matched.
+        { 
+          path: "/",
+          element: <Home />
+        }
+      ]
+    }
+  ])
+
+
   return (
     <div className="App">
-      <Header />
-      <header className="App-header">
-        <img className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* RouterProvider is used to render child routes */}
+      <RouterProvider router={router} />
     </div>
   );
 }

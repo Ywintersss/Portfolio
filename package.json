@@ -1,0 +1,17 @@
+{
+    "scripts":
+    {
+        "start:frontend":"cd frontend && npm start",
+        "start:backend":"cd backend && npm start",
+        "start":"concurrently -n \"FRONTEND,BACKEND\" -c \"red,blue\" -p \"[{name}]\" \"cd portfolio-frontend && npm start\" \"cd portfolio-backend && npm start\"",
+        "build":"concurrently \"cd backend && npm run build\" \"cd frontend && npm run build\""
+    },
+    "devDependencies":
+    {
+        "concurrently":"^8.2.2"
+    },
+    "dependencies":
+    {
+        "axios":"^1.6.8"
+    }
+}
